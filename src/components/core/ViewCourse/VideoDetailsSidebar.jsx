@@ -263,16 +263,15 @@ export default function VideoDetailsSidebar({ setReviewModal }) {
 
 
 {quizCompleted && isPresent && isCongratulations && typeof quizScore === "number" && (
-  <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
-    <div className="bg-green-500 text-white px-6 py-4 rounded-lg shadow-lg text-center"
-         style={{ width: "384px", height: "104px" }}>
+  <div className="absolute inset-0 z-[9999] bg-black flex justify-center items-center">
+    <div className="bg-green-500 text-white px-6 py-4 rounded-lg shadow-2xl text-center w-[384px]">
       <div className="flex flex-col justify-center h-full">
         <p className="text-lg font-semibold mb-4">
           🎉 Congratulations! You completed the quiz with a score of {quizScore}
         </p>
         <button
           onClick={handleCourseCompletion}
-          className="mt-auto bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded"
+          className="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded"
         >
           Mark Course as Completed
         </button>
